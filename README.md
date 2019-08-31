@@ -1,7 +1,7 @@
 Nordic nRF52840 BLE Heart Rate Collector
 ========================================
 
-A Bluetooth Lowe Energy (BLE) Heart Rate Collector using a Nordic nRF52840 development board.
+A Bluetooth Low Energy (BLE) Heart Rate Collector using a Nordic nRF52840 development board.
 
 ![Heart Rate Collector](/Images/HeartRateCollector.jpg)
 
@@ -15,7 +15,7 @@ More info about this project can be found on my website [here](http://www.tmdarw
 
 -   [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
 
--   [Monochrome 1.3" 128x64 OLED Graphic Display](https://www.adafruit.com/product/938)
+-   [Adafruit Monochrome 1.3" 128x64 OLED Graphic Display](https://www.adafruit.com/product/938)
 
 -   [Heart Rate Monitor Chest Strap](https://www.amazon.com/CooSpo-Fitness-Tracker-Waterproof-Bluetooth/dp/B07BS6B4PD)
 
@@ -24,11 +24,11 @@ More info about this project can be found on my website [here](http://www.tmdarw
 
 **Building**
 
-1.   This project was built using [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
+-   This project was built using [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
 
-1.   This project uses the [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
+-   This project uses the [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
 
-1.   Flashing the Nordic SoftDevice to the nRF52 dev board is required.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
+-   Flashing the Nordic SoftDevice to the nRF52 dev board is required.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
 
  
 
