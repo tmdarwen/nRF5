@@ -24,6 +24,7 @@ nRF52 and Adafruit IMU
  
 
 **Running**
+
 After building the software and flashing the binary to the nRF52, open a serial session using a terminal program such as [PuTTY](https://www.putty.org/).  The COM port to use can be found in Device Manager (if using Windows).  The baud rate is 115,200.  If everything is setup correctly, you should see the IMU data displayed every half second.
      
 
