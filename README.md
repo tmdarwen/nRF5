@@ -29,7 +29,7 @@ Nordic nRF52840 Projects
 **Licensing**
 
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code 
-authored by Terence M. Darwen within this project:
+authored by Terence M. Darwen within this repo:
 
 *Copyright (c) 2019-2020 Terence M. Darwen - tmdarwen.com*
 
