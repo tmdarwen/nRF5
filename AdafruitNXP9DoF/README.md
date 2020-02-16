@@ -2,7 +2,6 @@ nRF52 and Adafruit IMU
 ======================
 
 **Hardware**
-
 -   [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
 -   [Adafruit NXP Precision 9DoF IMU Breakout Board](https://learn.adafruit.com/nxp-precision-9dof-breakout/overview)
 
@@ -10,9 +9,8 @@ nRF52 and Adafruit IMU
 
 
 **Building**
-
--   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
--   [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
+-   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio)
+-   [Nordic nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK) 
 
  
 
@@ -34,8 +32,7 @@ After building the software and flashing the binary to the nRF52, open a serial 
 
 **Licensing**
 
-Aside from specific Nordic and Adafruit code, the MIT License applies to all code 
-authored by Terence M. Darwen within this repo:
+Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
 
 *Copyright (c) 2019-2020 Terence M. Darwen - tmdarwen.com*
 

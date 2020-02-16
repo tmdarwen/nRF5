@@ -2,7 +2,6 @@ Nordic nRF52 Projects
 =====================
 
 **Projects**
-
 -    [Adafruit NXP Precision 9DoF IMU Breakout Board ](AdafruitNXP9DoF)
 -    [Basic Project Template](BasicProjectTemplate)
 -    [BLE Heart Rate Collector](HRCollector)
@@ -10,26 +9,21 @@ Nordic nRF52 Projects
  
 
 **Hardware**
-
 -   [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
 
  
 
 
 **Building**
-
--   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
-
--   [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
-
+-   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio)
+-   [Nordic nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
 -   BLE projects require flashing the Nordic SoftDevice to the nRF52 dev board.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
 
  
 
 **Licensing**
 
-Aside from specific Nordic and Adafruit code, the MIT License applies to all code 
-authored by Terence M. Darwen within this repo:
+Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
 
 *Copyright (c) 2019-2020 Terence M. Darwen - tmdarwen.com*
 
