@@ -3,9 +3,9 @@ Nordic nRF52840 BLE Heart Rate Collector
 
 A Bluetooth Low Energy (BLE) Heart Rate Collector using a Nordic nRF52840 development board.
 
-![Heart Rate Collector](/Images/HeartRateCollector.jpg)
+![Heart Rate Collector](Images/HeartRateCollector.jpg)
 
-![Heart Rate Collector Close Up](/Images/HeartRateCollectorCloseUp.gif)
+![Heart Rate Collector Close Up](Images/HeartRateCollectorCloseUp.gif)
 
 More info about this project can be found on my website [here](http://www.tmdarwen.com/latest/ble-heart-rate-collector).
 
