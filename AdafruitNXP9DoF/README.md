@@ -11,9 +11,8 @@ nRF52 and Adafruit IMU
 
 **Building**
 
--   The projects use [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
-
--   The projects use the [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
+-   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
+-   [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
 
  
 

@@ -1,5 +1,5 @@
-Nordic nRF52840 Projects
-========================
+Nordic nRF52 Projects
+=====================
 
 **Projects**
 
@@ -18,11 +18,11 @@ Nordic nRF52840 Projects
 
 **Building**
 
--   The projects use [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
+-   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio).
 
--   The projects use the [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
+-   [nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK). 
 
--   Flashing the Nordic SoftDevice to the nRF52 dev board is required for BLE projects.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
+-   BLE projects require flashing the Nordic SoftDevice to the nRF52 dev board.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
 
  
 
