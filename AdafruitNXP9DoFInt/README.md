@@ -1,26 +1,37 @@
-Nordic nRF52 Projects
-=====================
-
-**Projects**
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board ](AdafruitNXP9DoF)
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board (Using Data-Ready Interrupts)](AdafruitNXP9DoFInt)
--    [Basic Project Template](BasicProjectTemplate)
--    [BLE Heart Rate Collector](HRCollector)
-
- 
+nRF52 and Adafruit/NXP IMU - Using Data Ready Interrupts
+========================================================
 
 **Hardware**
 -   [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
+-   [Adafruit NXP Precision 9DoF IMU Breakout Board](https://learn.adafruit.com/nxp-precision-9dof-breakout/overview)
 
  
 
 
 **Building**
 -   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio)
--   [Nordic nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
--   BLE projects require flashing the Nordic SoftDevice to the nRF52 dev board.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
+-   [Nordic nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK) 
 
  
+
+
+**Wiring**
+-    AdaFruit/NXP VIN to nRF52 5V
+-    AdaFruit/NXP GND to nRF52 GND
+-    AdaFruit/NXP SCL to nRF52 P0.27
+-    AdaFruit/NXP SDA to nRF52 P0.26
+-    AdaFruit/NXP GI1 to nRF52 P0.02
+-    AdaFruit/NXP AI1 to nRF52 P0.03
+
+ 
+
+**Running**
+
+After building the software and flashing the binary to the nRF52, open a serial session using a terminal program such as [PuTTY](https://www.putty.org/).  The COM port to use can be found in Device Manager (if using Windows).  The baud rate is 115,200.  If everything is setup correctly, you should see the IMU data displayed multpile times per second.
+     
+
+ 
+
 
 **Licensing**
 
