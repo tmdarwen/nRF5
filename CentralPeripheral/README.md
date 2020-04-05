@@ -3,9 +3,7 @@ Qt Central / nRF52 Peripheral
 
 **Description**
 
-This is an example of a BLE central that runs on a PC or laptop, and communicates with a BLE peripheral that runs on an Nordic nRF52.
--   The central is a command line program that runs on any typical PC or laptop which has Bluetooth support and can run [Qt](https://www.qt.io/).  This has been tested on Windows 10 and Linux (Ubuntu).
--   The peripheral runs on a [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/).  It's essentially [this Nordic example](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v14.2.0/ble_sdk_app_blinky.html).
+This is an example of a BLE central that runs on a PC or laptop, and communicates with a BLE peripheral that runs on an Nordic nRF52.  The central is a command line program that runs on any typical PC or laptop which has Bluetooth support and can run [Qt](https://www.qt.io/).  This has been tested on Windows 10 and Linux (Ubuntu).  The peripheral runs on a [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/).  It's essentially [this Nordic example](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v14.2.0/ble_sdk_app_blinky.html).
 
  
 
