@@ -2,8 +2,9 @@ Qt Central / nRF52 Peripheral
 =============================
 
 **Description**
+This is an example of a central that runs on a PC or laptop, and a peripheral that runs on an Nordic nRF52.
 -   The central is a command line program that runs on any typical PC or laptop which has Bluetooth support and can run [Qt](https://www.qt.io/).  This has been tested on Windows 10 and Linux (Ubuntu).
--   The peripheral runs on a [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
+-   The peripheral runs on a [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/).  It's essentially [this Nordic example](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v14.2.0/ble_sdk_app_blinky.html).
 
  
 
@@ -16,7 +17,7 @@ Qt Central / nRF52 Peripheral
 
 
 **Building the Central**
--   Download and install Qt for open source users from [Qt](https://www.qt.io/). Start Qt Creator, load NordicBlinkyCentral.prom and build.
+-   Download and install Qt for open source users from [Qt](https://www.qt.io/). Start Qt Creator, load NordicCentral.pro and build.
 
  
 
@@ -28,6 +29,14 @@ Qt Central / nRF52 Peripheral
 
  
 
+**Running**
+- Start the nRF52 peripehral application running on the nRF52 development board.
+- Run NordicCentral project in Qt Creator.
+- As shown in the image below, the central application will toggle the LED on the nRF52 board every two seconds.  When pressing the button on the nRF52 board, the Qt application will log when the button is pressed and released.
+
+![Heart Rate Collector Close Up](BoardAndCentral.png)
+
+ 
 
 **Licensing**
 

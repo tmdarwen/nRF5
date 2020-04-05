@@ -19,11 +19,11 @@ namespace
     constexpr unsigned int NORDIC_BLINKY_LED_CHAR_UUID = 0x1525;    // LED characteristic UUID
 }
 
-class NordicBlinkyCentral : public QObject
+class NordicCentral : public QObject
 {
     public:
-        NordicBlinkyCentral() = default;
-        ~NordicBlinkyCentral() = default;
+        NordicCentral() = default;
+        ~NordicCentral() = default;
 
         void Start()
         {
@@ -35,7 +35,7 @@ class NordicBlinkyCentral : public QObject
     private:
         void StartTimer()
         {
-            connect(&m_timer, &QTimer::timeout, this, &NordicBlinkyCentral::TimerEvent);
+            connect(&m_timer, &QTimer::timeout, this, &NordicCentral::TimerEvent);
             m_timer.start(TIMER_MS);
         }
 
@@ -43,11 +43,11 @@ class NordicBlinkyCentral : public QObject
         {
             m_deviceDiscoveryAgent = std::make_unique<QBluetoothDeviceDiscoveryAgent>(this);
             m_deviceDiscoveryAgent->setLowEnergyDiscoveryTimeout(BLE_SCAN_TIMEOUT_MS);
-            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, this, &NordicBlinkyCentral::DeviceDiscovered);
+            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::deviceDiscovered, this, &NordicCentral::DeviceDiscovered);
             connect(m_deviceDiscoveryAgent.get(), static_cast<void (QBluetoothDeviceDiscoveryAgent::*)
-                    (QBluetoothDeviceDiscoveryAgent::Error)>(&QBluetoothDeviceDiscoveryAgent::error), this, &NordicBlinkyCentral::ScanError);
-            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::finished, this, &NordicBlinkyCentral::ScanFinished);
-            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::canceled, this, &NordicBlinkyCentral::ScanCancelled);
+                    (QBluetoothDeviceDiscoveryAgent::Error)>(&QBluetoothDeviceDiscoveryAgent::error), this, &NordicCentral::ScanError);
+            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::finished, this, &NordicCentral::ScanFinished);
+            connect(m_deviceDiscoveryAgent.get(), &QBluetoothDeviceDiscoveryAgent::canceled, this, &NordicCentral::ScanCancelled);
             m_deviceDiscoveryAgent->start(QBluetoothDeviceDiscoveryAgent::DiscoveryMethod::LowEnergyMethod);
         }
 
@@ -60,9 +60,9 @@ class NordicBlinkyCentral : public QObject
             m_controller->setRemoteAddressType(QLowEnergyController::PublicAddress);
 
             //! [Connect-Signals-2]
-            connect(m_controller, &QLowEnergyController::serviceDiscovered, this, &NordicBlinkyCentral::ServiceDiscovered);
-            connect(m_controller, &QLowEnergyController::discoveryFinished, this, &NordicBlinkyCentral::ServiceScanDone);
-            connect(m_controller, &QLowEnergyController::connectionUpdated, this, &NordicBlinkyCentral::ConnectionUpdated);
+            connect(m_controller, &QLowEnergyController::serviceDiscovered, this, &NordicCentral::ServiceDiscovered);
+            connect(m_controller, &QLowEnergyController::discoveryFinished, this, &NordicCentral::ServiceScanDone);
+            connect(m_controller, &QLowEnergyController::connectionUpdated, this, &NordicCentral::ConnectionUpdated);
 
             connect(m_controller, static_cast<void (QLowEnergyController::*)(QLowEnergyController::Error)>(&QLowEnergyController::error),
                     this, [](QLowEnergyController::Error)
@@ -120,9 +120,9 @@ class NordicBlinkyCentral : public QObject
                 m_service = m_controller->createServiceObject(m_gatt, this);
                 if(m_service)
                 {
-                    connect(m_service, &QLowEnergyService::stateChanged, this, &NordicBlinkyCentral::ServiceStateChanged);
-                    connect(m_service, &QLowEnergyService::characteristicChanged, this, &NordicBlinkyCentral::NordicBlinkyButtonPress);
-                    connect(m_service, &QLowEnergyService::descriptorWritten, this, &NordicBlinkyCentral::ConfirmedDescriptorWrite);
+                    connect(m_service, &QLowEnergyService::stateChanged, this, &NordicCentral::ServiceStateChanged);
+                    connect(m_service, &QLowEnergyService::characteristicChanged, this, &NordicCentral::NordicBlinkyButtonPress);
+                    connect(m_service, &QLowEnergyService::descriptorWritten, this, &NordicCentral::ConfirmedDescriptorWrite);
                     m_service->discoverDetails();
                 }
             }
@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    NordicBlinkyCentral central;
+    NordicCentral central;
     central.Start();
 
     return a.exec();
