@@ -17,7 +17,9 @@ This is an example of a central that runs on a PC or laptop, and a peripheral th
 
 
 **Building the Central**
--   Download and install Qt for open source users from [Qt](https://www.qt.io/). Start Qt Creator, load NordicCentral.pro and build.
+-   Download and install [Qt](https://www.qt.io/) for open source users.
+-   Start Qt Creator.
+-   Load NordicCentral.pro and build.
 
  
 
@@ -31,7 +33,7 @@ This is an example of a central that runs on a PC or laptop, and a peripheral th
 
 **Running**
 - Start the nRF52 peripehral application running on the nRF52 development board.
-- Run NordicCentral project in Qt Creator.
+- Run the NordicCentral project in Qt Creator.
 - As shown in the image below, the central application will toggle the LED on the nRF52 board every two seconds.  When pressing the button on the nRF52 board, the Qt application will log when the button is pressed and released.
 
 ![Heart Rate Collector Close Up](BoardAndCentral.png)
@@ -40,7 +42,7 @@ This is an example of a central that runs on a PC or laptop, and a peripheral th
 
 **Licensing**
 
-Aside from specific Nordic code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
+The MIT License applies to all code authored by Terence M. Darwen within this repo:
 
 *Copyright (c) 2020 Terence M. Darwen - tmdarwen.com*
 
