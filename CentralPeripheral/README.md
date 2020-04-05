@@ -9,7 +9,7 @@ This is an example of a BLE central that runs on a PC or laptop, and communicate
 
 
 **Hardware**
--   For the BLE Central: Any typical machine with Bluetooth that can run Qt.
+-   For the BLE Central: Any typical laptop or PC with Bluetooth that can run [Qt](https://www.qt.io/).
 -   For the BLE Peripheral: [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
 
  
