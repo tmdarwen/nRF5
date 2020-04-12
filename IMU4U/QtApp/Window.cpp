@@ -43,6 +43,6 @@ Window::Window() : m_GLWidget(this)
     setLayout(&m_MainLayout);
 
     connect(&m_Timer, &QTimer::timeout, this, &Window::TimerHandler);
-    connect(&m_Timer, &QTimer::timeout, &m_GLWidget, &GLWidget::animate);
+    connect(&m_Timer, &QTimer::timeout, &m_GLWidget, &GLWidget::Animate);
     m_Timer.start(100);
 }

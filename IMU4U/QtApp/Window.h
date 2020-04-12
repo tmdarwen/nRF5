@@ -14,12 +14,11 @@ class Window : public QWidget
         Window();
 
     private:
+        void TimerHandler();
+
         QLabel m_positionLabels;
         QGridLayout dataLayout;
         GLWidget m_GLWidget;
         QGridLayout m_MainLayout;
         QTimer m_Timer;
-
-        void TimerHandler();
-
 };

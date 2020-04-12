@@ -14,7 +14,7 @@ class GLWidget : public QOpenGLWidget
         GLWidget(QWidget *parent);
 
     public slots:
-        void animate();
+        void Animate();
 
     protected:
         void paintEvent(QPaintEvent *event) override;

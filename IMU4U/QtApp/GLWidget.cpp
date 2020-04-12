@@ -22,7 +22,7 @@ GLWidget::GLWidget(QWidget *parent) : QOpenGLWidget(parent)
     setAutoFillBackground(false);
 }
 
-void GLWidget::animate()
+void GLWidget::Animate()
 {
     m_Elapsed = (m_Elapsed + qobject_cast<QTimer*>(sender())->interval()) % 1000;
     update();
