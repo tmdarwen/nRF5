@@ -1,30 +1,15 @@
 #include "Window.h"
-
 #include <QFontDatabase>
 
-void Window::TimerHandler()
+namespace
 {
-    static int counter = 0;
-
-    QString str;
-    str.sprintf("Status: %s\n\n"
-                "Accel\nX:% 1.2fg\nY:% 1.2fg\nZ:% 1.2fg\nx:% 5d\ny:% 5d\nz:% 5d\n\n"
-                "Gyro\nX:% *.2f°/s\nY:% *.2f°/s\nZ:% *.2f°/s\nx:% *d\ny:% *d\nz:% *d\n\n"
-                "Mag\nX:% 4.0fuT\nY:% 4.0fμT\nZ:% 4.0fμT\nx:% 4d\ny:% 4d\nz:% 4d\n\n"
-                "Button:%s\nError:%d\nTimer:%d",
-                "Connected",
-                0, 0, 0,
-                0, 0, 0,
-                6, 0, 6, 0, 6, 0,
-                6, 0, 6, 0, 6, 0,
-                0, 0, 0,
-                0, 0, 0, "Up", 0, counter);
-
-    m_positionLabels.setText(str);
-    ++counter;
+    constexpr double ONE_G_IN_LSB = 16384.0;      // Conversion from accelerometer int value to gravitational unit (See datasheet)
+    constexpr double MICRO_TESLA_PER_LSB = 0.001; // Conversion from magmometer int value to tesla unit (See datasheet)
+    constexpr double DEGREES_PER_LSB = 0.0078125; // Conversion from gyro int value to degrees per second (See datasheet)
+    constexpr int    TIMER_MS = 100;              // TimerHandler() called every TIMER_MS milliseconds
 }
 
-Window::Window() : m_GLWidget(this)
+Window::Window(NordicCentral& nordicCentral) : m_GLWidget(this), m_NordicCentral(nordicCentral)
 {
     setFixedSize(600,420);
     setWindowFlags(Qt::Window);
@@ -44,5 +29,45 @@ Window::Window() : m_GLWidget(this)
 
     connect(&m_Timer, &QTimer::timeout, this, &Window::TimerHandler);
     connect(&m_Timer, &QTimer::timeout, &m_GLWidget, &GLWidget::Animate);
-    m_Timer.start(100);
+    m_Timer.start(TIMER_MS);
+
+    m_NordicCentral.Start();
+}
+
+void Window::TimerHandler()
+{
+    static int counter = 0;
+
+    auto IMUData = m_NordicCentral.IMUData();
+
+    QString str;
+    str.sprintf("Connected: %s\n\n"
+                "Accel\nX:% 2.2fg\nY:% 2.2fg\nZ:% 2.2fg\nx:% 6d\ny:% 6d\nz:% 6d\n\n"
+                "Gyro\nX:% *.2f°/s\nY:% *.2f°/s\nZ:% *.2f°/s\nx:% *d\ny:% *d\nz:% *d\n\n"
+                "Mag\nX:% 2.2fmT\nY:% 2.2fmT\nZ:% 2.2fmT\nx:% 6d\ny:% 6d\nz:% 6d\n\n"
+                "LED:%s\nButton:%s\nError:%d\nTimer:%d",
+                m_NordicCentral.Connected() ? "Yes" : "No",
+                IMUData.Accel.X / ONE_G_IN_LSB,
+                IMUData.Accel.Y / ONE_G_IN_LSB,
+                IMUData.Accel.Z / ONE_G_IN_LSB,
+                IMUData.Accel.X,
+                IMUData.Accel.Y,
+                IMUData.Accel.Z,
+                6, IMUData.Gyro.X * DEGREES_PER_LSB,
+                6, IMUData.Gyro.Y * DEGREES_PER_LSB,
+                6, IMUData.Gyro.Z * DEGREES_PER_LSB,
+                6, IMUData.Gyro.X,
+                6, IMUData.Gyro.Y,
+                6, IMUData.Gyro.Z,
+                IMUData.Accel.X * MICRO_TESLA_PER_LSB,
+                IMUData.Accel.Y * MICRO_TESLA_PER_LSB,
+                IMUData.Accel.Z * MICRO_TESLA_PER_LSB,
+                IMUData.Accel.X,
+                IMUData.Accel.Y,
+                IMUData.Accel.Z,
+                m_NordicCentral.LEDState() == NordicCentral::LED_STATE::ON ? "On" : "Off",
+                m_NordicCentral.ButtonPressed() ? "Down" : "Up", 0, counter);
+
+    m_positionLabels.setText(str);
+    ++counter;
 }

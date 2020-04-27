@@ -5,13 +5,14 @@
 #include <QLabel>
 #include <QTimer>
 #include "GLWidget.h"
+#include "NordicCentral.h"
 
 class Window : public QWidget
 {
     Q_OBJECT
 
     public:
-        Window();
+        Window(NordicCentral&);
 
     private:
         void TimerHandler();
@@ -21,4 +22,6 @@ class Window : public QWidget
         GLWidget m_GLWidget;
         QGridLayout m_MainLayout;
         QTimer m_Timer;
+
+        NordicCentral& m_NordicCentral;
 };

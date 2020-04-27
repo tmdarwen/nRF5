@@ -1,11 +1,15 @@
-#include "Window.h"
 #include <QApplication>
+
+#include "NordicCentral.h"
+#include "Window.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    Window window;
+    NordicCentral nordicCentral;
+
+    Window window(nordicCentral);
     window.show();
 
     return app.exec();
