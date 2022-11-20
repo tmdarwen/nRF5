@@ -6,6 +6,8 @@ Nordic nRF5 Projects
 -    [Blinky Project for the KiCad MDBT40 Breakout Board](nRF51/Blinky/)
 
 
+Â 
+
 **nRF52 Projects**
 -    [Adafruit/NXP Precision 9DoF IMU Breakout Board ](nRF52/AdafruitNXP9DoF)
 -    [Adafruit/NXP Precision 9DoF IMU Breakout Board (Using Data-Ready Interrupts)](nRF52/AdafruitNXP9DoFInt)
@@ -14,6 +16,8 @@ Nordic nRF5 Projects
 -    [Qt Central / nRF52 Peripheral](nRF52/CentralPeripheral)
 
  
+Â 
+
 **Licensing**
 
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
