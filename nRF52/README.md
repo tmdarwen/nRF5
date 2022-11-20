@@ -1,19 +1,28 @@
-Nordic nRF5 Projects
+Nordic nRF52 Projects
 ====================
 
-**nRF51 Projects**
--    [KiCad Project MDBT40 (Nordic nRF51422) Breakout Board](nRF51/BreakoutBoardMDBT40/)
--    [Blinky Project for the KiCad MDBT40 Breakout Board](nRF51/Blinky/)
-
-
-**nRF52 Projects**
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board ](nRF52/AdafruitNXP9DoF)
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board (Using Data-Ready Interrupts)](nRF52/AdafruitNXP9DoFInt)
--    [Basic Project Template](nRF52/BasicProjectTemplate)
--    [BLE Heart Rate Collector](nRF52/HRCollector)
--    [Qt Central / nRF52 Peripheral](nRF52/CentralPeripheral)
+**Projects**
+-    [Adafruit/NXP Precision 9DoF IMU Breakout Board ](AdafruitNXP9DoF)
+-    [Adafruit/NXP Precision 9DoF IMU Breakout Board (Using Data-Ready Interrupts)](AdafruitNXP9DoFInt)
+-    [Basic Project Template](BasicProjectTemplate)
+-    [BLE Heart Rate Collector](HRCollector)
+-    [Qt Central / nRF52 Peripheral](CentralPeripheral)
 
  
+
+**Hardware**
+-   [Nordic nRF52840 Development Board](https://www.mouser.com/new/nordic-semiconductor/nordic-nRF52840-dev-kit/)
+
+ 
+
+
+**Building**
+-   [Segger Embedded Studio](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Segger-Embedded-Studio)
+-   [Nordic nRF5 SDK](https://www.nordicsemi.com/Software-and-Tools/Software/nRF5-SDK)
+-   BLE projects require flashing the Nordic SoftDevice to the nRF52 dev board.  Detailed info [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.2.0/getting_started_softdevice.html).
+
+ 
+
 **Licensing**
 
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:

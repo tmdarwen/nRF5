@@ -5,20 +5,12 @@ Nordic nRF5 Projects
 -    [KiCad Project MDBT40 (Nordic nRF51422) Breakout Board](nRF51/BreakoutBoardMDBT40/)
 -    [Blinky Project for the KiCad MDBT40 Breakout Board](nRF51/Blinky/)
 
-
-**nRF52 Projects**
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board ](nRF52/AdafruitNXP9DoF)
--    [Adafruit/NXP Precision 9DoF IMU Breakout Board (Using Data-Ready Interrupts)](nRF52/AdafruitNXP9DoFInt)
--    [Basic Project Template](nRF52/BasicProjectTemplate)
--    [BLE Heart Rate Collector](nRF52/HRCollector)
--    [Qt Central / nRF52 Peripheral](nRF52/CentralPeripheral)
-
  
 **Licensing**
 
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
 
-*Copyright (c) 2019-2022 Terence M. Darwen - tmdarwen.com*
+*Copyright (c) 2022-2022 Terence M. Darwen - tmdarwen.com*
 
 *Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
