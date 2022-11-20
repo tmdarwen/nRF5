@@ -2,10 +2,11 @@ Nordic nRF5 Projects
 ====================
 
 **nRF51 Projects**
--    [KiCad Project MDBT40 (Nordic nRF51422) Breakout Board](nRF51/BreakoutBoardMDBT40/)
--    [Blinky Project for the KiCad MDBT40 Breakout Board](nRF51/Blinky/)
+-    [KiCad Project MDBT40 (Nordic nRF51422) Breakout Board](BreakoutBoardMDBT40/)
+-    [Blinky Project for the KiCad MDBT40 Breakout Board](Blinky/)
 
- 
+
+
 **Licensing**
 
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code authored by Terence M. Darwen within this repo:
