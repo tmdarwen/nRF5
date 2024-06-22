@@ -7,7 +7,7 @@ A Bluetooth Low Energy (BLE) Heart Rate Collector using a Nordic nRF52840 develo
 
 ![Heart Rate Collector Close Up](Images/HeartRateCollectorCloseUp.gif)
 
-More info about this project can be found on my website [here](http://www.tmdarwen.com/latest/ble-heart-rate-collector).
+More info about this project can be found on my website [here](https://tmdarwen.com/ble-heart-rate-monitor-collector.html).
 
  
 
@@ -37,7 +37,7 @@ More info about this project can be found on my website [here](http://www.tmdarw
 Aside from specific Nordic and Adafruit code, the MIT License applies to all code 
 authored by Terence M. Darwen within this project:
 
-*Copyright (c) 2019 Terence M. Darwen - tmdarwen.com*
+*Copyright (c) 2019 Terence M. Darwen - *
 
 *Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
